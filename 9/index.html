@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="app-root">
+  
+  <h2>Number one : {{num1}}</h2>
+  <!-- Computed methods called without fire only method name -->
+  <h2>Number One x 2 = {{changeNumberOne}}</h2>
+  <button @click="num1++">increase number one</button>
+  <h2>Number two : {{num2}}</h2>
+    <h2>Number Two x 10 = {{changeNumberTwo}}</h2>
+
+    <button @click="num2++">increase number two</button>
+
+
+</div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+</body> 
+</html>
