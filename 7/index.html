@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="app-root">
+    <label for="textInp">{{name}}</label>
+    <!-- To make Two Way Data Binding use v-model="variable name" && Two way Data binding often used with inputs and form elements  -->
+   <input type="text" v-model="name" name="textInp" id="textInp">
+   <button @click="name = 'Mohammed Fayez'">Reset</button>
+</div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
