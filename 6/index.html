@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="app-root">
+   <h2>Number Is {{number}}</h2>
+   <!-- To use events use v-on:event name = "function name"  or @event name -->
+   <button v-on:click="increaseNumber">Increase</button>
+   <button @click="decreseNumber">Decrease</button>
+<br>
+   <!-- To use event modifiers like prevent event use @event name.modifier name -->
+    <a href="https://google.com" @click.prevent>Google</a> <!-- When click on link not go to google -->
+    <a href="#" @click.once="showAlert">Once</a> <!-- Alert will apear for once only with first click -->
+<br>
+<!-- Keyboard Events  -->
+ <label for="">print name</label>
+    <input type="text" @keyup="printName">
+    <br>
+     <label for="">print age</label>
+    <input type="text" @keydown="printAge">
+    <br>
+    <!-- Keyboard Event Modifiers -->
+ <label for="">print name only when click enter button</label>
+    <input type="text" @keyup.enter="printName">
+    <br>
+     <label for="">print age only when click alt + enter button</label>
+    <input type="text" @keyup.alt.enter="printName">
+</div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
