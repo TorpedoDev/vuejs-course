@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="app-root">
+  <!-- To loop data in variable use v-for="single record name in variable name" and must pass unique value for :key -->
+   <!-- You can select index to pass it to :key as unique value v-for="(student,index) in students" :key="index"  -->
+
+    <div v-for="student in students" :key="student.id">
+      <h1>Student Name : {{student.name}}</h1>
+      <h2>Student Age : {{student.age}}</h2>
+      <h3>Student ID : {{student.id}}</h3>
+      <hr>
+    </div>
+
+</div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+</body> 
+</html>
