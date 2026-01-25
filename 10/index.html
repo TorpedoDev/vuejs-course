@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="app-root">
+  
+<h3>My name is {{name}} and my age is {{age}}</h3>
+<!-- There is v-if and v-else-if and v-else to show elements based on condition like this  -->
+<!-- Only the element wich his condition is true will be showed in Dom elements   -->
+<!-- v-show also show elements based on condition but when condition is false element will showed in dom with display:none proeprty   -->
+<h4 v-if="age <30">My age is younger than 30</h4>
+<h4 v-else-if="age == 30">My age is 30</h4>
+<h4 v-else>My age is older than 30</h4>
+
+<h5 v-show="age < 30">You are young youth</h5>
+
+<button @click="age ++">Increase Age</button>
+
+</div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+</body> 
+</html>
