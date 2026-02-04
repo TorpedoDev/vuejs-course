@@ -1,6 +1,16 @@
 <template>
+  <the-nav></the-nav>
   <router-view />
 </template>
+
+<script>
+import TheNav from "@/components/MyNav.vue";
+export default {
+  components: {
+    TheNav,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
