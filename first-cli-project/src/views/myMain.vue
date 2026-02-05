@@ -7,7 +7,12 @@
       Sunt, error optio, cum saepe quam ipsa consequuntur eaque accusamus
       maiores vitae, id vero et maxime rem provident ab fugiat.
     </p>
-    <MyStudents :students="students" />
+    <MyStudents
+      :students="students"
+      :isActive="isActive"
+      @NotActiveStatus="notStatus"
+    />
+    <!-- to listen to an created event using $emit use @event name -->
   </div>
 </template>
 
@@ -18,12 +23,18 @@ export default {
   data() {
     return {
       students: ["Mohammed", "Mahmoud", "Mostafa"],
+      isActive: true,
     };
   },
   name: "MyMain",
   components: {
     MyHeading,
     MyStudents,
+  },
+  methods: {
+    notStatus() {
+      this.isActive = !this.isActive;
+    },
   },
 };
 </script>
