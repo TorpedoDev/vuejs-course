@@ -13,6 +13,8 @@
       @NotActiveStatus="notStatus"
     />
     <!-- to listen to an created event using $emit use @event name -->
+    <p>Age : {{ age }}</p>
+    <button @click="age++">Increase Age</button>
   </div>
 </template>
 
@@ -24,6 +26,7 @@ export default {
     return {
       students: ["Mohammed", "Mahmoud", "Mostafa"],
       isActive: true,
+      age: 20,
     };
   },
   name: "MyMain",
@@ -35,6 +38,25 @@ export default {
     notStatus() {
       this.isActive = !this.isActive;
     },
+  },
+  // There are hooks in vue
+  beforeCreate() {
+    alert("Before Create");
+  },
+  created() {
+    alert("Created");
+  },
+  beforeMount() {
+    alert("Before Mount");
+  },
+  mounted() {
+    alert("Mounted");
+  },
+  beforeUpdate() {
+    alert("Before Update");
+  },
+  updated() {
+    alert("Updated");
   },
 };
 </script>
